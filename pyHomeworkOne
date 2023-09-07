@@ -1,0 +1,39 @@
+import math as m
+pi=m.pi
+e=m.e
+x=input("write your x please")
+y=input("write your y please")
+print("the add of x and y is %d"%(x+y))
+print("the average of x and y is %d"%((x+y)/2))
+print("the quotient of x and y is %d"%(x//y))
+print("the remainder of x and y is %d"%(x%y))
+print("the x raised to the power y is %d"%(m.pow(x,y)))
+
+print("the sqrt of (pi**2+3) is %f"%(m.sqrt(pi**2+3)))
+print("the(ln(2pi*sqrt of (13+e) is %f"%(m.log(2*pi*m.sqrt(13+e))))
+print(m.atan(m.log10((pi+1))))
+
+radius = 2.11
+volume = (4/3) * pi * (radius**3)
+print("the volume of ball of 2.11 radius is: %f"%volume)
+
+outer_radius = 16.2
+inner_radius = 9.4
+area = m.pi * (outer_radius**2 - inner_radius**2)
+print("the area of the cirque is %f"%area)
+
+radius = 66
+height = 24.2
+volume = m.pi * (radius**2) * height
+area = 2 * m.pi * radius * (radius + height)
+print("the volume is %f"%volume)
+print("the area is %f"%area)
+
+
+x1=input("write x1 please")
+y1=input("write y1 please")
+x2=input("write x2 please")
+y2=input("write y2 please")
+distance="{:.2f}".format(m.sqrt(((x1-x2)**2)+((y1-y2)**2)))
+print("the distance is")
+print(distance)
