@@ -27,6 +27,7 @@ inner_radius = 9.4
 area = m.pi * (outer_radius**2 - inner_radius**2)
 print("the area of the cirque is %f"%area)
 
+#radius用了两次，是因为后面的赋值把前面的赋值覆盖了，不影响结果
 radius = 66
 height = 24.2
 volume = m.pi * (radius**2) * height
