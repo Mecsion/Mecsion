@@ -1,0 +1,43 @@
+#导入math库
+import math as m
+#给语文、数学、英语成绩赋值
+Chinese=eval(input("请输入小明的语文成绩"))
+math=eval(input("请输入小明的数学成绩"))
+English=eval(input("请输入小明的英语成绩"))
+sum=Chinese+math+English
+average=(Chinese+math+English)/3
+
+#输出三门成绩和
+print("三门成绩的和为%d"%sum)
+
+#输出三门成绩的平均分数
+print("三门成绩的平均分为%d"%average)
+
+#计算最大值
+def max(x,y,z):
+    if x>y:temp=x
+    elif x==y:print("存在两数相等")
+    else:temp=y
+
+    if temp>z:print("最大值为%d"%temp)
+    elif temp==z:print("存在两数相等")
+    else:print("最大值为%d"%z)
+
+
+#计算加权成绩
+def final(x,y,z):
+    fin=x*0.5+y*0.3+z*0.2
+    print("最终加权成绩为%d"%fin)
+
+#调用函数输出最大值与加权成绩
+maxNumber=max(Chinese,math,English)
+final(Chinese,math,English)
+
+#使用input输入一个三位数
+x=eval(input("请输入一个三位数"))
+def calculate(x):
+    sum=x//100+(x%100)//10+x%10
+    print("该三位数的位数之和为%d"%sum)
+
+calculate(x)
+
