@@ -1,0 +1,10 @@
+#学生综合素质测评由德育测评（A1）、智育测评（A2）、体育测评（A3）和美育、劳
+#动教育及发展素质测评（A4）共4个部分组成。测评成绩按照百分制计算，具体如下：总
+#成绩=A1*10%+A2*60%+A3*5%+A4*25%
+
+A1=float(input("write your morality score"))
+A2=float(input("write your intelligence score"))
+A3=float(input("write your physical score"))
+A4=float(input("write your comprehensive quality score"))
+finalScore=A1*0.1+A2*0.6+A3*0.05+A4*0.25
+print("your final score is %f"%finalScore)
