@@ -1,0 +1,36 @@
+        // 建立MapDocument类字段，用于访问地图文档的属性和方法
+        MapDocument mapDocument = null;
+
+        /// <summary>
+        /// 打开mxd文档方法
+        /// </summary>
+        /// <param name="axMapControl"></param>
+        public void OpenFile(AxMapControl axMapControl)
+        {
+            //打开文件字符流
+            OpenFileDialog pDialog = new OpenFileDialog();
+            //设置打开文件管理器的标题
+            pDialog.Title = "打开mxd文档";
+            if (pDialog.ShowDialog() == DialogResult.OK)
+            {
+                mapDocument = new MapDocumentClass();
+                // 获取文件路径
+                string pFileName = pDialog.FileName;
+                // 检查mxd是否合法
+                if (axMapControl.CheckMxFile(pFileName))
+                {
+                    // 打开地图文档
+                    mapDocument.Open(pFileName, "");
+                    // 加载地图文档时候将鼠标更改为正在加载状态
+                    axMapControl.MousePointer = ESRI.ArcGIS.Controls.esriControlsMousePointer.esriPointerHourglass;
+                    // 在MapControl控件加载mxd地图数据
+                    axMapControl.LoadMxFile(pFileName);
+                    // 加载完成后鼠标更改为默认指针样式
+                    axMapControl.MousePointer = ESRI.ArcGIS.Controls.esriControlsMousePointer.esriPointerDefault;
+                }
+                else
+                {
+                    MessageBox.Show("加载错误");
+                }
+            }
+        }
