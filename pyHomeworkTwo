@@ -3,7 +3,7 @@
 #有一个字符串为“星期一星期二星期三星期四星期五星期六星期日”，编写程序，
 #当从键盘上输入数字1时屏幕输出“星期一”，输入数字2时屏幕输出“星期二”，以此类推。
 newString="星期一星期二星期三星期四星期五"
-start=input("write your number please:")
+start=eval(input("write your number please:"))
 realstart = start*3-1
 print(newString[realstart-2:realstart+1])
 
