@@ -1,0 +1,67 @@
+import random
+#grade=eval(input("请输入普通话成绩"))
+#if (grade>=80 and grade<=100):
+#    print("成绩合格")
+#elif(grade<80 and grade>0):
+#    print("成绩不合格")
+#elif(type(grade)!=int or grade<0 or grade>100):
+#    print("输入数据类型或成绩范围不正确")
+#else:
+#    print("出现未知错误")
+
+#grade=float(input("请输入普通话成绩"))
+#if(grade>=97 and grade<=100):
+#    print("一级甲等")
+#elif(grade>=92 and grade<97):
+#    print("一级乙等")
+#elif(grade>=87 and grade<92):
+#    print("二级甲等")
+#elif(grade>=80 and grade<92):
+#    print("二级乙等")
+#elif(grade<80 and grade>=0):
+#    print("成绩不合格")
+#elif(type(grade)!=int or grade<0 or grade>100):
+#    print("输入数据类型或成绩范围不正确")
+#else:
+#    print("出现未知错误")
+
+
+#class fireBall():
+#class blizzard():
+#
+#class sodier():
+#   def __init__ (name,attack,defence,speed,health,skillname):
+#       sodier.name=naem
+#       sodier.attack=attack
+#       sodier.defence=defence
+#       sodier.speed=speed
+#       sodier.health=health
+#       sodier.skillname=skillname
+#    def attack(self):
+#        print("重拳出击")
+
+#numberArray[i]=[1,2,3,4,5,6,7,8,9,10]
+number=8
+
+cout = 1
+leftnum=4
+while cout<6:
+    gussNum = eval(input("请输入一个1~10的整数"))
+    if(gussNum<1 or gussNum>10):
+        print("你输入的数字不合法或不在范围内")
+    elif(gussNum>number):
+        print("大了")
+    elif(gussNum<number):
+        print("小了")
+    elif(gussNum==8):
+        print("猜对辣！恭喜你！")
+        break
+    if cout==5:
+        print("次数用完，下次在来吧！")
+    if(leftnum):
+        print("你还剩%d次机会",%leftnum)
+    cout+=1
+    leftnum-=1
+
+
+
