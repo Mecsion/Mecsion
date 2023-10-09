@@ -1,0 +1,67 @@
+list1=[54,36,75,28,50]
+print("在尾部插入元素42后，列表为")
+list1.append(42)
+print(list1)
+print("在28前面插入元素46后，列表为")
+list1.insert(3,46)
+print(list1)
+tmp=list1.pop(4)
+print("删除并输出的元素为:")
+print(tmp)
+list1.sort(reverse=True)
+print("列表按降序排列后为")
+print(list1)
+list1.sort()
+print("列表按升序排列后为")
+print(list1)
+print("列表已清空")
+
+squares=[]
+for i in range(1,101):
+    squares.append(i*i)
+print(squares)
+
+triples=[]
+
+for m in range(3,100,3):
+        triples.append(m)
+print(triples)
+
+Acceptance_Rate=[57.5,56.8,57.7,62.9,69.3,72.4,75.5,76.2,74.3,74.1]
+sum=0.00
+for i in Acceptance_Rate:
+    sum+=i
+print("十年的平均录取率为：")
+average=sum/len(Acceptance_Rate)
+print(sum/len(Acceptance_Rate))
+Max_value=max(Acceptance_Rate)
+maxIndex=Acceptance_Rate.index(Max_value)
+print("录取率最高的年份为%d",2013+maxIndex)
+high_years=[]
+for i in Acceptance_Rate:
+    if i > average:
+        high_years.append(Acceptance_Rate.index(i)+2013)
+print("超出平均录取率的年份有：")
+for i in high_years:
+    print(i)
+#五个菜品分别为a,b,c,d,e
+menu=("a","b","c","d","e")
+print("五个菜品分别为：")
+for i in menu:
+    print(i)
+print("python不会让我修改元组的内容")
+def newMenu(index,array,text):
+    arple=list(array)
+    arple[index]=text
+    choice=input("是否修改完毕？yes/no:")
+
+    while choice=="no":
+        newIndex = int(input("新菜品的序号为："))
+        newText=input("新菜品的名称为：")
+        arple[newIndex] = newText
+        choice = input("是否修改完毕？yes/no:")
+
+    if choice=="yes":
+        for i in arple:
+            print(i)
+newMenu(0,menu,"爆炒腰花")
