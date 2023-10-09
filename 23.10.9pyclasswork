@@ -27,6 +27,8 @@ for m in range(3,100,3):
         triples.append(m)
 print(triples)
 
+
+
 Acceptance_Rate=[57.5,56.8,57.7,62.9,69.3,72.4,75.5,76.2,74.3,74.1]
 sum=0.00
 for i in Acceptance_Rate:
@@ -44,6 +46,9 @@ for i in Acceptance_Rate:
 print("超出平均录取率的年份有：")
 for i in high_years:
     print(i)
+
+
+
 #五个菜品分别为a,b,c,d,e
 menu=("a","b","c","d","e")
 print("五个菜品分别为：")
