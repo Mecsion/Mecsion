@@ -1,0 +1,76 @@
+;使用示例数据，对IDL中相关系数计算函数correlate(x,y)和偏相关p_correlate(x,y)计算逻辑函数的编写封装
+;written by 马剑翔
+
+pro correlateS
+  ;相关系数示例数据
+  x=[12, 8, 9, 13, 5, 7]
+  y=[14, 10, 14, 15, 6, 10]
+  
+  r = corCau(x,y)
+  
+  print,'x与y的相关系数：',r
+  
+  
+  ;偏相关系数示例数据
+  x1=[12, 8, 9, 13, 5, 7]
+  x2=[4, 7, 12, 5, 13, 14]
+  y=[14, 10, 14, 15, 6, 10]
+  
+  print,'x1与y的偏相关系数为',pCorCau(x1,y,x2)
+  print,'x2与y的偏相关系数为',pCorCau(x2,y,x1)
+  
+  
+end
+
+;相关系数计算函数
+function corCau,x,y
+  sumx=0.0
+  sumy=0.0
+  ;x*y的和
+  sumxy = 0.0
+  ;参数的平方的和
+  sumx2 = 0.0
+  sumy2 = 0.0
+  ;e表示数学期望，ex2表示每个数据平方的数学期望
+  ex = 0.0
+  ey = 0.0
+  ;exy表示x和y的每个项的乘积的数学期望
+  exy = 0.0
+  ex2=0.0
+  ey2 = 0.0
+  ;r用来存储结果
+  r=0.0
+
+  sizematrix = size(x)
+  length = sizematrix[1]
+
+  for i=0, length-1 do begin
+    sumx+=x[i]
+    sumy+=y[i]
+    sumx2+=x[i]^2
+    sumy2+=y[i]^2
+    sumxy+=x[i]*y[i]
+  endfor
+
+  ex = sumx/length
+  ey = sumy/length
+  exy = sumxy/length
+  ex2 = sumx2/length
+  ey2 = sumy2/length
+
+  
+  r=(exy-ex*ey)/((ex2-ex^2)^0.5*(ey2-ey^2)^0.5)
+  
+  return,r
+end
+
+;偏相关系数计算函数（计算前两个参数的偏相关系数）
+function pCorCau,x,y,z
+  rxy = corCau(x,y)
+  rxz = corCau(x,z)
+  ryz = corCau(y,z)
+  
+  pxy = (rxy - rxz*ryz)/((1-ryz^2)*(1-rxz^2))^0.5
+  
+  return,pxy
+end
