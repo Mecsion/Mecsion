@@ -1,0 +1,32 @@
+ENVI
+description = {
+  File Resize Result, x resize factor: 1.000000, y resize factor: 1.000000.
+  [Sat Aug 20 16:12:03 2022]}
+samples = 800
+lines   = 600
+bands   = 2
+header offset = 0
+file type = ENVI Standard
+data type = 12
+interleave = bsq
+sensor type = Landsat TIR
+byte order = 0
+map info = {UTM, 1.000, 1.000, 661305.000, 3561195.000, 3.0000000000e+01, 3.0000000000e+01, 50, North, WGS-84, units=Meters}
+coordinate system string = {PROJCS["WGS_1984_UTM_Zone_50N",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",117.0],PARAMETER["Scale_Factor",0.9996],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]}
+wavelength units = Micrometers
+band names = {
+ Resize (Thermal Infrared 1:LC08_L1TP_120038_20211004_20211013_01_T1_MTL.txt), 
+ Resize (Thermal Infrared 2:LC08_L1TP_120038_20211004_20211013_01_T1_MTL.txt)}
+wavelength = {
+ 10.900000, 12.000000}
+fwhm = {
+ 0.582711, 0.999812}
+data gain values = {
+ 3.34200000e-04, 3.34200000e-04}
+data offset values = {
+ 1.00000000e-01, 1.00000000e-01}
+image quality = 9
+thermal k1 = {
+        774.88530,        480.88830}
+thermal k2 = {
+        1321.0789,        1201.1442}
