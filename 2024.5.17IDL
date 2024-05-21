@@ -40,7 +40,8 @@ function corCau,x,y
   ey2 = 0.0
   ;r用来存储结果
   r=0.0
-
+  
+  ;获取数组长度
   sizematrix = size(x)
   length = sizematrix[1]
 
